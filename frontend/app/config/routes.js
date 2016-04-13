@@ -5,7 +5,7 @@ import Main from '../components/Main';
 import Home from '../containers/Home';
 import TodosContainer from '../containers/TodosContainer';
 import AddContainer from '../containers/AddContainer';
-import EditContainer from '../containers/EditContainer';
+
 
 
 const routes = (
@@ -14,7 +14,6 @@ const routes = (
       <IndexRoute component={Home} />
       <Route path='todos' component={TodosContainer} />
       <Route path='addnew' component={AddContainer} />
-      <Route path='edit' component={EditContainer} />
 
     </Route>
   </Router>

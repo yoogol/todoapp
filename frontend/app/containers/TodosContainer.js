@@ -3,15 +3,16 @@ import React, { PropTypes } from 'react';
 let headStyle = {
   padding: 5,
   position: 'fixed',
-  top: 100,
-  background: 'lightblue',
+  top: 120,
+  background: 'lightgrey',
   height: 20,
-  width: '90%',
+  width: '57%',
   zIndex: 50
 };
 let divStyle = {
   postion: 'relative',
-  marginTop: 150
+  marginTop: 170,
+  width: '65%'
 };
 let todoLineStyle = {
   borderBottom: '1px solid lightgrey',

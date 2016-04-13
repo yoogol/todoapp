@@ -119,11 +119,7 @@ const Home = React.createClass({
   render: function() {
     return (
       <div style={appStyle}>
-        <div style={divStyle}>
-          <ActionMenu searchHandler={this.searchHandler} quickAddHandler={this.quickAddHandler}
-          addNewFormHandler={this.addNewFormHandler}/>
-          <Filter />
-        </div>
+        <Filter />
         <Container currentScreen={this.state.currentScreen} todosToDisplay={this.state.todosToDisplay}
         returnHomeHandler={this.returnHomeHandler}
         editFormHandler={this.editFormHandler}
@@ -141,8 +137,5 @@ let appStyle = {
   fontFamily: 'sans-serif'
 };
 
-let divStyle = {
-  background: 'yellow',
-  width: 300
-}
+
 export default Home;

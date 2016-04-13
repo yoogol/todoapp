@@ -5,10 +5,10 @@ let actionMenuStyle = {
   display: 'flex',
   justifyContent: 'space-between',
   position: 'fixed',
-  top: 0,
+  top: 60,
   zIndex: 20,
   width: '90%',
-  background: 'purple',
+  background: 'white',
   height: 40,
   padding: 10
 };
@@ -49,6 +49,7 @@ const SearchTodo = React.createClass ({
           placeholder='search todos'
           onKeyPress={this.props.searchHandler}
           />
+
       </div>
     )
   }
@@ -72,7 +73,7 @@ const AddNewButton = React.createClass ({
       <button
         style={buttonStyle}
         type="button"
-        onClick={this.props.addNewFormHandler}>Add new todo</button>
+        onClick={this.props.addNewFormHandler}> Create New ToDo </button>
     )
   }
 });
@@ -83,7 +84,7 @@ const QuickAddBox = React.createClass ({
       <input
         style={boxStyle}
         type='text'
-        placeholder='quick add'
+        placeholder='quick add to Bucket list'
         onKeyPress={this.props.quickAddHandler}
         />
     )

@@ -1,16 +1,21 @@
 import React from 'react';
 import TodosContainer from './TodosContainer';
 import AddContainer from './AddContainer';
-import EditContainer from './EditContainer';
+
+import ActionMenu from '../components/ActionMenu';
 
 const Container = React.createClass ({
 
   render: function() {
     if (this.props.currentScreen == 'Todos') {
       return (
+        <div style={containerStyle}>
+        <ActionMenu searchHandler={this.props.searchHandler} quickAddHandler={this.props.quickAddHandler}
+         addNewFormHandler={this.props.addNewFormHandler}/>
         <TodosContainer todosToDisplay={this.props.todosToDisplay}
         editFormHandler={this.props.editFormHandler} deleteTodoHandler={this.props.deleteTodoHandler}
         />
+      </div>
       )
     } else if (this.props.currentScreen == 'Edit'){
       return (
@@ -29,5 +34,9 @@ const Container = React.createClass ({
     }
   }
 });
+
+let containerStyle = {
+
+}
 
 export default Container;

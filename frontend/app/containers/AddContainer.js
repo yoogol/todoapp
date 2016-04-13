@@ -46,9 +46,9 @@ const AddContainer = React.createClass ({
   },
   displayTitle: function() {
     if (this.state.typeOfForm == 'Edit') {
-      return <h3>Edit Task</h3>
+      return <h4>Editing existing task...</h4>
     } else if (this.state.typeOfForm == 'Add') {
-      return <h3>Add New Task</h3>
+      return <h4>Adding new task...</h4>
     }
   },
   handleSubmit: function(e) {
@@ -99,8 +99,12 @@ const AddContainer = React.createClass ({
   },
   render: function() {
     return (
+      <div style={mainDivStyle}>
       <div style={divStyle}>
         {this.displayTitle()}
+        <input type="submit" />
+        <button type="button" onClick={this.props.returnHomeHandler}>Cancel</button>
+        {this.displayDelete()}
         <form onSubmit={this.handleSubmit} style={formStyle}>
             <label>What do you need to do?</label>
             <br />
@@ -167,26 +171,41 @@ const AddContainer = React.createClass ({
         </form>
 
       </div>
+      <div style={secondDivStyle}><h6>Searching tasks already in your todo...</h6></div>
+      </div>
     )
   }
 })
 
 let formStyle = {
-    width: '80%',
+    width: '90%',
     height: 20,
     padding: 5,
     margin: '10px auto 10px auto',
     fontSize: 14,
     marginBottom: 20,
-
 };
 
 let divStyle ={
+  width: '60%',
   fontSize: 16,
+  marginTop: 70,
+  minHeight: 600,
+  background: 'lightgrey',
   textAlign: 'center',
-  marginTop: 150,
-  border: '1px solid grey',
-  minHeight: 600
+  padding: 5
 };
+
+let secondDivStyle = {
+  width: '40%',
+  marginTop: 70,
+  textAlign: 'center',
+  padding: 5,
+};
+
+let mainDivStyle = {
+  display: 'flex',
+  justifyContent: 'space-between'
+}
 
 export default AddContainer;

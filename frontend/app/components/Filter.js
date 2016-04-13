@@ -4,24 +4,31 @@ let filterStyle = {
   display: 'flex',
   justifyContent: 'space-around',
   position: 'fixed',
-  top: 60,
-  background: 'white',
+  top: 0,
+  background: 'purple',
   padding: 10,
   zIndex: 20,
   width: '90%',
-  height: 20
+  height: 40
 };
+
+let buttonStyle = {
+  marginTop: 5,
+  height: 30,
+  background: 'indigo',
+  color: 'white'
+}
 
 const Filter = React.createClass ({
   render: function() {
     return (
       <div style={filterStyle}>
-        <button>Smart filter</button>
-        <button>Today</button>
-        <button>Tomorrow</button>
-        <button>Overdue</button>
-        <button>Sort by time</button>
-        <button>Sort by importance</button>
+        <button style={buttonStyle}>Smart filter</button>
+        <button style={buttonStyle}>Today</button>
+        <button style={buttonStyle}>Tomorrow</button>
+        <button style={buttonStyle}>Overdue</button>
+        <button style={buttonStyle}>Sort by time</button>
+        <button style={buttonStyle}>Sort by importance</button>
 
       </div>
     )
